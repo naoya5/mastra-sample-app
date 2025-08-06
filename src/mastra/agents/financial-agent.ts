@@ -1,6 +1,6 @@
 import { Agent } from "@mastra/core/agent";
 import { openai } from "@ai-sdk/openai";
-// We'll import our tool in a later step
+import { getTransactionsTool } from "../tools/get-transactions-tool";
 
 export const financialAgent = new Agent({
   name: "Financial Assistant Agent",
@@ -29,7 +29,11 @@ export const financialAgent = new Agent({
 成功基準
 - トランザクションデータの正確で有用な分析を提供する。
 - 明確で有用な回答を通じて高いユーザー満足度を達成する。
-- データのプライバシーとセキュリティを確保することでユーザーの信頼を維持する。`,
+- データのプライバシーとセキュリティを確保することでユーザーの信頼を維持する。
+
+ツール
+- getTransactionsツールを使用して財務トランザクションデータを取得する。
+- トランザクションデータを分析して、ユーザーの支出に関する質問に答える。`,
   model: openai("gpt-4o"), // You can use "gpt-3.5-turbo" if you prefer
-  tools: {}, // We'll add tools in a later step
+  tools: { getTransactionsTool }, // Add our tool here
 });

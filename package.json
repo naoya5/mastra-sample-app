@@ -6,7 +6,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mastra dev",
     "build": "mastra build",
-    "start": "mastra start"
+    "start": "mastra start",
+    "sample:weather": "node scripts/sample-workflows.js weather",
+    "sample:financial": "node scripts/sample-workflows.js financial",
+    "sample:tasks": "node scripts/sample-workflows.js tasks",
+    "sample:help": "node scripts/sample-workflows.js help"
   },
   "keywords": [],
   "author": "",

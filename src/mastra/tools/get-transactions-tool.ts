@@ -9,7 +9,7 @@ export const getTransactionsTool = createTool({
     csvData: z.string(),
   }),
   execute: async () => {
-    return await getTransactionsTool();
+    return await getTransactions();
   },
 });
 
